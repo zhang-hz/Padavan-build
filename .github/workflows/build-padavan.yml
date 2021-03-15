@@ -107,7 +107,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=n" >> configs/templates/$TNAME.config     #删除DDNS_SSL
         echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=n" >> configs/templates/$TNAME.config        #删除HTTPS
         echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=n" >> configs/templates/$TNAME.config      #删除OPENVPN
-        echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=y" >> configs/templates/$TNAME.config   #使用FFMPEG新版本
+        echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=n" >> configs/templates/$TNAME.config   #使用FFMPEG新版本
         echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> configs/templates/$TNAME.config       #删除用于IPTV的XUPNPD
         echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> configs/templates/$TNAME.config       #删除用于Drcom的工具DOGCOM
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> configs/templates/$TNAME.config  #删除SS plus+
@@ -158,7 +158,7 @@ jobs:
           echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> configs/templates/$TNAME.config #集成AdGuardHome
           echo "CONFIG_FIRMWARE_INCLUDE_WYY=y" >> configs/templates/$TNAME.config         #网易云解锁
           echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=y" >> configs/templates/$TNAME.config      #网易云解锁GO版本执行文件（4M多）注意固件超大小,不集成会自动下载
-          echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> configs/templates/$TNAME.config    #zerotier ~1.3M
+          echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> configs/templates/$TNAME.config    #zerotier ~1.3M
           # 更新v2ray版本
           v2_version=`curl --silent "https://api.github.com/repos/v2fly/v2ray-core/releases/latest" | jq -r '.tag_name | sub("^v";"")'`
           sed -i "s/V2ray_VERSION := .*/V2ray_VERSION := $v2_version/g" /opt/rt-n56u/trunk/user/v2ray/Makefile

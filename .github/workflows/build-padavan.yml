@@ -103,7 +103,7 @@ jobs:
         ####################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_LANG_CN=y" >> configs/templates/$TNAME.config      #设置界面简体中文
         echo "CONFIG_FIRMWARE_INCLUDE_QOS=n" >> configs/templates/$TNAME.config          #删除QOS
-        echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> configs/templates/$TNAME.config       #使用SMBD36新版本
+        echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=n" >> configs/templates/$TNAME.config       #使用SMBD36新版本
         echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=n" >> configs/templates/$TNAME.config     #删除DDNS_SSL
         echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=n" >> configs/templates/$TNAME.config        #删除HTTPS
         echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=n" >> configs/templates/$TNAME.config      #删除OPENVPN

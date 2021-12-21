@@ -54,6 +54,7 @@ jobs:
         go-version: ${{ steps.vars.outputs.go_version }}
     - name: Build Firmware
       run: |
+        echo $GOROOT
         cd /opt/rt-n56u/trunk
         echo "CPU超频到$MHZ"mhz
         echo "修改CPU频率"

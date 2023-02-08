@@ -129,7 +129,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TCPDUMP=n" >> configs/templates/$TNAME.config      #删除TCPDUMP
         echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=n" >> configs/templates/$TNAME.config     #删除EAP_PEAP
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y" >> configs/templates/$TNAME.config   #删除OPENSSL_EC
-        echo "CONFIG_FIRMWARE_CPU_900MHZ=y" >> configs/templates/$TNAME.config           #开启超频，仅MT7621可用
+        echo "CONFIG_FIRMWARE_CPU_900MHZ=n" >> configs/templates/$TNAME.config           #开启超频，仅MT7621可用
         #########################################################################################
         # 自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         # https://github.com/hanwckf/rt-n56u/blob/master/trunk/configs/templates/
@@ -147,7 +147,7 @@ jobs:
 
           echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> configs/templates/$TNAME.config      #simple-obfs混淆插件
           echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> configs/templates/$TNAME.config      #adbyby plus+
-          echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> configs/templates/$TNAME.config     #阿里DDNS
+          echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> configs/templates/$TNAME.config     #阿里DDNS
           echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> configs/templates/$TNAME.config    #smartdns
           echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=n" >> configs/templates/$TNAME.config #smartdns二进制文件
           # 特别注意，开启v2同样需要开启113行的shadowsocks，否则不会编译
